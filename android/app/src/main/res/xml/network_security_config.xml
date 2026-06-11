@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Cleartext blocked by default. ApiConfig defaults release builds to
+https://api.igobi.app — production traffic is unaffected.
+
+The dev-host domain-config below permits HTTP only to the Android emulator
+host loopback (10.0.2.2), localhost, and the laptop's LAN IP — needed when
+release APKs run on the emulator/device against an un-TLS'd local backend.
+See README for the matching flutter build command.
+
+Before store submission, delete the <domain-config> block — production
+should never reach a cleartext host. The matching `src/debug/` variant
+remains for normal debug-mode work.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>      <!-- Android emulator -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">192.168.1.8</domain>   <!-- LAN dev host -->
+    </domain-config>
+</network-security-config>

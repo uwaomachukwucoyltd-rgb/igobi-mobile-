@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Debug-only network config. Allows cleartext to localhost and to the dev LAN
+IP so a phone on the same Wi-Fi can talk to the laptop's auth-service while
+developing. Never shipped in release.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>      <!-- Android emulator -->
+        <domain includeSubdomains="true">192.168.1.8</domain>   <!-- LAN dev host -->
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>

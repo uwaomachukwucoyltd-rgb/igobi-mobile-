@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>$(DEVELOPMENT_LANGUAGE)</string>
+		<key>CFBundleDisplayName</key>
+		<string>iGobi mobile App</string>
+		<key>CFBundleExecutable</key>
+		<string>$(EXECUTABLE_NAME)</string>
+		<key>CFBundleIdentifier</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		<key>CFBundleInfoDictionaryVersion</key>
+		<string>6.0</string>
+		<key>CFBundleName</key>
+		<string>igobi</string>
+		<key>CFBundlePackageType</key>
+		<string>APPL</string>
+		<key>CFBundleShortVersionString</key>
+		<string>$(FLUTTER_BUILD_NAME)</string>
+		<key>CFBundleSignature</key>
+		<string>????</string>
+		<key>CFBundleVersion</key>
+		<string>$(FLUTTER_BUILD_NUMBER)</string>
+		<key>LSRequiresIPhoneOS</key>
+		<true/>
+		<key>UILaunchStoryboardName</key>
+		<string>LaunchScreen</string>
+		<key>UIMainStoryboardFile</key>
+		<string>Main</string>
+		<key>UISupportedInterfaceOrientations</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>UISupportedInterfaceOrientations~ipad</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationPortraitUpsideDown</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>CADisableMinimumFrameDurationOnPhone</key>
+		<true/>
+		<key>UIApplicationSupportsIndirectInputEvents</key>
+		<true/>
+		<key>UIStatusBarStyle</key>
+		<string>UIStatusBarStyleDefault</string>
+		<key>UIViewControllerBasedStatusBarAppearance</key>
+		<false/>
+		<!-- App Transport Security. We disallow arbitrary loads by default and
+	     only permit our pinned API host. Apple flags `NSAllowsArbitraryLoads`
+	     in review, so we set it to false here. -->
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<false/>
+			<key>NSExceptionDomains</key>
+			<dict>
+				<key>api.igobi.app</key>
+				<dict>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<true/>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.2</string>
+				</dict>
+			</dict>
+		</dict>
+		<!-- Permission usage strings. Include strings for every permission a
+	     plugin MAY request even if you don't use it today — App Review will
+	     reject if a binary references the permission without a usage string. -->
+		<key>NSCameraUsageDescription</key>
+		<string>IGOBI uses the camera to scan delivery codes and attach photos to a dispute.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>IGOBI accesses your photos so you can attach proof to a dispute or update your profile picture.</string>
+		<key>NSPhotoLibraryAddUsageDescription</key>
+		<string>IGOBI saves order receipts and proof-of-delivery to your photos when you tap Save.</string>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>IGOBI uses your location to show vendors in your LGA, calculate delivery ETAs, and route runners to you.</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>IGOBI uses the microphone for voice messages to the Concierge AI and to vendors.</string>
+		<key>NSContactsUsageDescription</key>
+		<string>IGOBI uses contacts only when you choose a recipient for a Diaspora-Mode delivery.</string>
+		<key>NSFaceIDUsageDescription</key>
+		<string>IGOBI uses Face ID to unlock the app and authorise high-value escrow actions.</string>
+		<!-- Allow LSApplicationQueriesSchemes for opening the dialer, mailto,
+	     and SMS from the Concierge / dispute flows. -->
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>tel</string>
+			<string>mailto</string>
+			<string>sms</string>
+		</array>
+		<!-- ITSAppUsesNonExemptEncryption=false skips the export-compliance
+	     interview at every TestFlight upload. We only use HTTPS + Keystore
+	     crypto, both standard. -->
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
+		<!-- Background modes for FCM. `remote-notification` is required for
+	     silent push payloads and for FCM token refresh while the app is
+	     suspended. You must ALSO enable the Push Notifications capability
+	     in Xcode (target > Signing & Capabilities > + Capability > Push
+	     Notifications) when the Xcode project is regenerated — that adds
+	     aps-environment to Runner.entitlements. See FCM_SETUP.md. -->
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>remote-notification</string>
+			<string>fetch</string>
+		</array>
+		<key>UIStatusBarHidden</key>
+		<false/>
+	</dict>
+</plist>

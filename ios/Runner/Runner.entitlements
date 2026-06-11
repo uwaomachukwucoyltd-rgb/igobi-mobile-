@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Sign in with Apple. Required by App Store Guideline 4.8 because the
+	     app also offers Google sign-in. The matching capability must be
+	     enabled on the App ID in the Apple Developer portal. -->
+	<key>com.apple.developer.applesignin</key>
+	<array>
+		<string>Default</string>
+	</array>
+	<!-- Push notifications (FCM). "development" works for debug/TestFlight
+	     internal; Xcode rewrites this to "production" for App Store archives
+	     when the Push Notifications capability is enabled on the App ID. -->
+	<key>aps-environment</key>
+	<string>development</string>
+</dict>
+</plist>

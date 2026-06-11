@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tint applied to the FCM notification icon. Matches AppColors.emerald
+         in lib/core/theme/app_colors.dart. -->
+    <color name="notification_color">#047857</color>
+	<color name="ic_launcher_background">#047857</color>
+</resources>

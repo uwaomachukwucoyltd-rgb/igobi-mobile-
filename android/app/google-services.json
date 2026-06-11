@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "902021827805",
+    "project_id": "igobi-mobile",
+    "storage_bucket": "igobi-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902021827805:android:351a9988a9b014f1d91f34",
+        "android_client_info": {
+          "package_name": "app.igobi.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902021827805-10baodstla919svs8iikem6dr7udfnco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.igobi.customer",
+            "certificate_hash": "ef73d4c4fb04d4b190884b9f7ac5feff87ec5a79"
+          }
+        },
+        {
+          "client_id": "902021827805-2vh8dac0ibf3jvtnrkvlmgcq8s9h8dil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.igobi.customer",
+            "certificate_hash": "7c60908d2eed3ced147144b30ed5426e50eb47f0"
+          }
+        },
+        {
+          "client_id": "902021827805-vq2asrd1sq5mn2q2c9q2mt0jpe7b4e2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsPNS8jwbKEzKPivmG4ToS92Nujj8Yh4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902021827805-vq2asrd1sq5mn2q2c9q2mt0jpe7b4e2g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "902021827805-rdr6cls6th1vpti9ubbe2n7bqdji5fhi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.igobi.customer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
